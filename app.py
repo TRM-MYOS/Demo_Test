@@ -1,5 +1,6 @@
-import yaml
-
-HOST = "0.0.0.0"                  # B104 (MEDIUM -15): เปิดรับทุก Interface
-def load_cfg(text):
-    return yaml.load(text) 
+def check_access(is_admin):
+    assert is_admin  # B101 (LOW -5): ใช้ assert ตรวจสิทธิ์
+    try:
+        return True
+    except Exception:
+        pass 

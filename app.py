@@ -1,6 +1,5 @@
-def add(a: int, b: int) -> int:
-    return a + b
+import subprocess
 
-
-if __name__ == "__main__":
-    print(add(2, 3))
+def run_cmd(user_input):
+    subprocess.run(f"echo {user_input}", shell=True)    # B602 (HIGH -25)
+    subprocess.Popen(f"dir {user_input}", shell=True)   # B602 (HIGH -25)

@@ -1,13 +1,5 @@
-def add(a: int, b: int) -> int:
-    assert isinstance(a, int)
-    assert isinstance(b, int)
-    assert a >= 0
-    assert b >= 0
-    assert a <= 1000
-    assert b <= 1000
-    assert a + b <= 2000
-    return a + b
+import yaml
 
-
-if __name__ == "__main__":
-    print(add(2, 3))
+HOST = "0.0.0.0"                  # B104 (MEDIUM -15): เปิดรับทุก Interface
+def load_cfg(text):
+    return yaml.load(text) 
